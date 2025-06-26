@@ -1,0 +1,28 @@
+{
+  "work": [
+    {
+      "title": "Delineo Disease Modeling",
+      "image": "/work/delineo.png",
+      "link": "[Visit](https://delineo.me), [GitHub](https://github.com/Delineo-Disease-Modeling)",
+      "description": "Research project focused on small-town disease simulation"
+    },
+        {
+      "title": "Kuchibhotla Laboratory",
+      "image": "/work/kishorelab.png",
+      "link": "[Visit](https://kishorelab.org)",
+      "description": "Neuroscience research focused on neural circuits and learning"
+    },
+    {
+      "title": "Stickbot.net",
+      "image": "/work/stickbotnet.png",
+      "link": "[Visit](https://stickbot.net)",
+      "description": "Personal website with features such as watch together, steam profile API, and more"
+    },
+    {
+      "title": "Stickbot",
+      "image": "/work/stickbot.png",
+      "link": "[GitHub](https://github.com/stickms/Stickbot)",
+      "description": "Discord bot with stickbot.net integration and commands"
+    }
+  ]
+}
