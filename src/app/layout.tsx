@@ -10,8 +10,18 @@ const funnelDisplay = Funnel_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'okmahmoud',
-  description: 'Ok Mahmoud'
+  title: 'Mahmoud Said',
+  description:
+    'Fourth-year undergraduate studying neuroscience & computer science',
+  metadataBase: new URL('https://okmahmoud.com'),
+  openGraph: {
+    title: 'Mahmoud Said',
+    description:
+      'Fourth-year undergraduate studying neuroscience & computer science',
+    type: 'website',
+    url: 'https://okmahmoud.com',
+    images: '/opengraph-image.png'
+  }
 };
 
 export default function RootLayout({
