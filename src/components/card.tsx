@@ -25,6 +25,7 @@ export default function Card({
           src={image}
           alt={`picture for ${title}`}
           fill={true}
+          priority
         />
       </div>
       <div className='p-1.5 whitespace-pre-line'>
