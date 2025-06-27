@@ -6,12 +6,12 @@ import './components.css';
 
 import { PageSwitch, BioText } from '@/components/paths';
 
-export const funnelDisplay = Funnel_Display({
+const funnelDisplay = Funnel_Display({
   variable: '--font-sans',
   subsets: ['latin']
 });
 
-export const courierPrime = Courier_Prime({
+const courierPrime = Courier_Prime({
   variable: '--font-mono',
   weight: '400',
   subsets: ['latin']
