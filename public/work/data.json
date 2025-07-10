@@ -23,6 +23,12 @@
       "image": "/work/stickbot.png",
       "link": "[GitHub](https://github.com/stickms/Stickbot)",
       "description": "Discord bot with stickbot.net integration and commands"
+    },
+    {
+      "title": "Chatstick",
+      "image": "/work/chatstick.png",
+      "link": "[GitHub](https://github.com/stickms/Chatstick)",
+      "description": "Discord bot with AI chatting & LLM functionality"
     }
   ]
 }

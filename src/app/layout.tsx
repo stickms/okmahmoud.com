@@ -4,7 +4,7 @@ import { Courier_Prime, Funnel_Display } from 'next/font/google';
 import './globals.css';
 import './components.css';
 
-import { PageSwitch, BioText } from '@/components/paths';
+import { PageSwitch } from '@/components/paths';
 
 const funnelDisplay = Funnel_Display({
   variable: '--font-sans',
@@ -42,8 +42,8 @@ export default function RootLayout({
       <body
         className={`${funnelDisplay.variable} ${courierPrime.variable} antialiased`}
       >
-        <div className='flex min-h-screen w-screen justify-center py-20 sm:pt-30'>
-          <div className='flex w-[40rem] max-w-[85vw] flex-col items-center gap-4'>
+        <div className='flex min-h-screen w-screen justify-center py-20'>
+          <div className='flex w-[42rem] max-w-[85vw] flex-col items-center gap-4'>
             <header className='flex w-full flex-col items-center sm:flex-row sm:justify-between'>
               <div className='flex flex-col text-center sm:text-left'>
                 <h1>Mahmoud Said</h1>
@@ -51,12 +51,15 @@ export default function RootLayout({
               </div>
               <nav className='flex items-center gap-6'>
                 <PageSwitch />
-                <a href='https://github.com/stickms'>GitHub</a>
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href='https://github.com/stickms'
+                >
+                  GitHub
+                </a>
               </nav>
             </header>
-            <div>
-              <BioText />
-            </div>
             {children}
           </div>
         </div>

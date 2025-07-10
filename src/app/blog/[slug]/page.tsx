@@ -48,15 +48,20 @@ export default async function BlogPage({
     <div className='flex w-[40rem] max-w-[85vw] flex-col gap-8'>
       {/* Metadata: image, title, desc, date */}
       <header className='flex flex-col gap-2'>
-        <div className='relative h-[16rem] w-full'>
-          <Image
-            className='rounded-lg object-cover'
-            src={metadata.image}
-            alt='Blog cover picture'
-            fill={true}
-          />
+        <div className='flex flex-col items-end'>
+          <div className='relative h-[16rem] w-full overflow-clip rounded-lg outline'>
+            <Image
+              className='object-cover'
+              src={metadata.image}
+              alt='Blog cover picture'
+              fill
+            />
+          </div>
+          {metadata.caption && (
+            <p className='text-sm italic'>{metadata.caption}</p>
+          )}
         </div>
-        <div className='flex flex-col items-center sm:items-start'>
+        <div className='flex flex-col text-center sm:text-left'>
           <h1 className='text-3xl'>{metadata.title}</h1>
           <p>{metadata.description}</p>
         </div>

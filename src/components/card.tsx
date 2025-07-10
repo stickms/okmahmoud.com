@@ -30,10 +30,30 @@ export default function Card({
       </div>
       <div className='p-1.5 whitespace-pre-line'>
         <h4>{title}</h4>
-        <Markdown>{description}</Markdown>
+        <Markdown
+          components={{
+            a: ({ href, children }) => (
+              <a target='_blank' rel='noopener noreferrer' href={href}>
+                {children}
+              </a>
+            )
+          }}
+        >
+          {description}
+        </Markdown>
       </div>
       <div className='absolute right-0 bottom-0 px-2 pb-1.5'>
-        <Markdown>{footer}</Markdown>
+        <Markdown
+          components={{
+            a: ({ href, children }) => (
+              <a target='_blank' rel='noopener noreferrer' href={href}>
+                {children}
+              </a>
+            )
+          }}
+        >
+          {footer}
+        </Markdown>
       </div>
     </div>
   );
@@ -52,7 +72,7 @@ export function BlogCard({
       className='!text-[var(--foreground)] !no-underline'
       style={undefined}
     >
-      <div className='w-[40rem] max-w-[85vw] rounded-md hover:underline'>
+      <div className='w-full rounded-md hover:underline'>
         <Card
           title={title}
           image={image}
