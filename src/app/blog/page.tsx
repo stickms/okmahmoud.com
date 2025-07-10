@@ -24,7 +24,7 @@ export default async function Blog() {
   const blogs = await getBlogMetadata();
 
   return (
-    <div className='flex flex-col gap-4 pt-2'>
+    <div className='flex flex-col gap-4 pt-2 w-full'>
       <p className='text-center whitespace-pre-line'>
         the following words are my own{'\n'}and so are any mistakes
       </p>

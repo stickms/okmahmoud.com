@@ -42,7 +42,10 @@ export default function RootLayout({
       <body
         className={`${funnelDisplay.variable} ${courierPrime.variable} antialiased`}
       >
-        <div className='flex min-h-screen w-screen justify-center py-20'>
+        <div
+          className='flex min-h-screen mx-auto justify-center py-20'
+          style={{ paddingLeft: 'calc(100vw - 100%)' }}
+        >
           <div className='flex w-[42rem] max-w-[85vw] flex-col items-center gap-4'>
             <header className='flex w-full flex-col items-center sm:flex-row sm:justify-between'>
               <div className='flex flex-col text-center sm:text-left'>

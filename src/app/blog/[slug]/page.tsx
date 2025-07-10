@@ -45,7 +45,7 @@ export default async function BlogPage({
   );
 
   return (
-    <div className='flex w-[40rem] max-w-[85vw] flex-col gap-8'>
+    <div className='flex w-full flex-col gap-8'>
       {/* Metadata: image, title, desc, date */}
       <header className='flex flex-col gap-2'>
         <div className='flex flex-col items-end'>
