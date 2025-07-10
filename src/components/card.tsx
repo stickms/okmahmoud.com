@@ -69,7 +69,7 @@ export function BlogCard({
   return (
     <Link
       href={link}
-      className='!text-[var(--foreground)] !no-underline w-full'
+      className='w-full !text-[var(--foreground)] !no-underline'
       style={undefined}
     >
       <div className='rounded-md hover:underline'>

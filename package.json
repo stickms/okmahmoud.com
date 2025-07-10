@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ./src/app/"
+    "format": "prettier --write ./src/"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
