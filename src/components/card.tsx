@@ -1,5 +1,4 @@
-'use client';
-
+import Image from 'next/image';
 import Link from 'next/link';
 import Markdown from 'react-markdown';
 
@@ -19,10 +18,12 @@ export default function Card({
   return (
     <div className='relative max-w-full min-w-[14rem] flex-grow basis-0 self-stretch rounded-md pb-6 outline'>
       <div className='relative h-[10rem] w-full'>
-        <img
-          className='size-full rounded-t-md object-cover'
+        <Image
+          className='rounded-t-md object-cover'
           src={image}
           alt={`picture for ${title}`}
+          fill
+          priority
         />
       </div>
       <div className='p-1.5 whitespace-pre-line'>

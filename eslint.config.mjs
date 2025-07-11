@@ -14,12 +14,7 @@ const eslintConfig = [
     'next/core-web-vitals',
     'next/typescript',
     'plugin:prettier/recommended'
-  ),
-  {
-    rules: {
-      '@next/next/no-img-element': 'off'
-    }
-  }
+  )
 ];
 
 export default eslintConfig;
