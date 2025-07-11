@@ -26,7 +26,7 @@ export default async function Blog() {
   return (
     <div className='flex w-full flex-col gap-4 pt-2'>
       <p className='text-center whitespace-pre-line'>
-        the following words are my own{'\n'}and so are any mistakes
+        ramblings, reflections, and runaway thoughts
       </p>
       <div>
         <h3 className='text-center sm:text-left'>Blog</h3>

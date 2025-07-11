@@ -3,7 +3,6 @@ import { BlogMetadata } from '@/util/types';
 import { MDXContent } from 'mdx/types';
 import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
-import Image from 'next/image';
 
 export async function generateMetadata({
   params
@@ -50,11 +49,10 @@ export default async function BlogPage({
       <header className='flex flex-col gap-2'>
         <div className='flex flex-col items-end'>
           <div className='relative h-[16rem] w-full overflow-clip rounded-lg outline'>
-            <Image
-              className='object-cover'
+            <img
+              className='size-full rounded-lg object-cover'
               src={metadata.image}
               alt='Blog cover picture'
-              fill
             />
           </div>
           {metadata.caption && (

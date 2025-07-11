@@ -52,16 +52,7 @@ export default function RootLayout({
                 <h1>Mahmoud Said</h1>
                 <p>msaid6 [at] jhu [dot] edu</p>
               </div>
-              <nav className='flex items-center gap-6'>
-                <Nav />
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='https://github.com/stickms'
-                >
-                  GitHub
-                </a>
-              </nav>
+              <Nav />
             </header>
             {children}
           </div>
