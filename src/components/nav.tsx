@@ -5,7 +5,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export function PageSwitch() {
+export default function Nav() {
   const pathname = usePathname();
 
   if (pathname === '/blog') {
@@ -20,19 +20,4 @@ export function PageSwitch() {
   }
 
   return <Link href='/blog'>Blog</Link>;
-}
-
-export function BioText() {
-  const pathname = usePathname();
-
-  if (pathname.startsWith('/blog/')) {
-    return null;
-  }
-
-  return (
-    <p className='text-center whitespace-pre-line'>
-      fourth-year undergraduate at johns hopkins{'\n'}
-      studying neuroscience & computer science
-    </p>
-  );
 }

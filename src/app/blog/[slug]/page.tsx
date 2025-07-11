@@ -66,11 +66,11 @@ export default async function BlogPage({
           <p>{metadata.description}</p>
         </div>
       </header>
-      <hr className='mx-auto h-px w-[80%] border-0 bg-[var(--foreground)] opacity-50' />
+      <hr className='mx-auto h-px w-[80%] border-none bg-[var(--foreground)] opacity-50' />
       <article className='prose'>
         <Content />
       </article>
-      <hr className='mx-auto h-px w-[80%] border-0 bg-[var(--foreground)] opacity-50' />
+      <hr className='mx-auto h-px w-[80%] border-none bg-[var(--foreground)] opacity-50' />
       <footer>
         <p className='text-center text-sm italic sm:text-left'>
           Published on{' '}

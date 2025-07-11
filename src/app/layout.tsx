@@ -4,7 +4,7 @@ import { Courier_Prime, Funnel_Display } from 'next/font/google';
 import './globals.css';
 import './components.css';
 
-import { PageSwitch } from '@/components/paths';
+import Nav from '@/components/nav';
 
 const funnelDisplay = Funnel_Display({
   variable: '--font-sans',
@@ -53,7 +53,7 @@ export default function RootLayout({
                 <p>msaid6 [at] jhu [dot] edu</p>
               </div>
               <nav className='flex items-center gap-6'>
-                <PageSwitch />
+                <Nav />
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
