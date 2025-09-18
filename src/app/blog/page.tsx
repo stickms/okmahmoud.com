@@ -31,6 +31,7 @@ export default async function Blog() {
       <div>
         <h3 className='text-center sm:text-left'>Blog</h3>
         <div className='flex flex-wrap items-center justify-center gap-4 pt-2'>
+          {!!blogs.length && <h4 className='mt-16'>nothing here yet...</h4>}
           {blogs
             .filter(({ published }) => published)
             .map((data, index) => (
