@@ -1,8 +1,8 @@
-export type BlogMetadata = {
-  title: string;
-  description: string;
-  image: string;
-  caption?: string;
-  date: Date;
-  published?: boolean;
-};
+export interface BlogMetadata {
+	title: string;
+	description: string;
+	image: string;
+	caption?: string;
+	date: Date;
+	published?: boolean;
+}

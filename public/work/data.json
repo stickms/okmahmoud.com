@@ -6,11 +6,17 @@
       "link": "[Visit](https://delineo.me) / [GitHub](https://github.com/Delineo-Disease-Modeling)",
       "description": "Research project focused on small-town disease simulation"
     },
-        {
+    {
       "title": "Kuchibhotla Laboratory",
       "image": "/work/kishorelab.png",
       "link": "[Visit](https://kishorelab.org)",
       "description": "Neuroscience research focused on neural circuits and learning"
+    },
+    {
+      "title": "Neuroarts Resource Center",
+      "image": "/work/nrc.png",
+      "link": "[Visit](https://neuroartsresourcecenter.com)",
+      "description": "Neuroaesthetics digital library where I write and curate articles"
     },
     {
       "title": "Stickbot.net",
@@ -22,13 +28,15 @@
       "title": "Stickbot",
       "image": "/work/stickbot.png",
       "link": "[GitHub](https://github.com/stickms/Stickbot)",
-      "description": "Discord bot with stickbot.net integration and commands"
+      "description": "Discord bot with stickbot.net integration and commands",
+      "hidden": true
     },
     {
       "title": "Chatstick",
       "image": "/work/chatstick.png",
       "link": "[GitHub](https://github.com/stickms/Chatstick)",
-      "description": "Discord bot with AI chatting & LLM functionality"
+      "description": "Discord bot with AI chatting & LLM functionality",
+      "hidden": true
     }
   ]
 }
