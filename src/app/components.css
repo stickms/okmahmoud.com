@@ -67,11 +67,20 @@ code {
   font-family: var(--font-mono);
 }
 
+article p + p {
+  margin-top: 1em;
+}
+
+article p + h4 {
+  margin-top: 2em;
+}
+
 blockquote {
   padding-left: 2rem;
   position: relative;
   overflow-y: clip;
   color: var(--foreground);
+  text-align: left;
 
   &::before {
     position: absolute;

@@ -11,7 +11,7 @@
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^15.5.11",
+    "@next/mdx": "^15.5.12",
     "@types/mdx": "^2.0.13",
     "globby": "^14.1.0",
     "mdx@latest": "link:next/mdx@latest",
@@ -24,8 +24,8 @@
   "devDependencies": {
     "@biomejs/biome": "2.3.13",
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "^20.19.30",
-    "@types/react": "^19.2.10",
+    "@types/node": "^20.19.32",
+    "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
