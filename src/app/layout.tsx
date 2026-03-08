@@ -25,12 +25,18 @@ const courierPrime = Courier_Prime({
 export const metadata: Metadata = {
   title: { default: 'Mahmoud Said', template: '%s | Mahmoud Said' },
   description:
-    'Fourth-year undergraduate studying neuroscience & computer science',
+    'Johns Hopkins alum studying neuroscience & computer science',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+  },
   metadataBase: new URL('https://okmahmoud.com'),
   openGraph: {
     title: 'Mahmoud Said',
     description:
-      'Fourth-year undergraduate studying neuroscience & computer science',
+      'Johns Hopkins alum studying neuroscience & computer science',
     type: 'website',
     url: 'https://okmahmoud.com',
     images: '/opengraph-image.png',
