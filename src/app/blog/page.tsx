@@ -1,5 +1,5 @@
 import { BlogCard } from '~/components/card';
-import ScrollReveal from '~/components/scroll-reveal';
+import { ScrollReveal } from '~/components/scroll-reveal';
 import { blogFiles } from '~/util/pages';
 import type { BlogMetadata } from '~/util/types';
 

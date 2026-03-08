@@ -2,6 +2,7 @@ import type { MDXContent } from 'mdx/types';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
+import { resolveImage } from '~/util/image';
 import { blogFiles } from '~/util/pages';
 import type { BlogMetadata } from '~/util/types';
 
@@ -56,10 +57,11 @@ export default async function BlogPage({
           <div className="relative h-64 w-full overflow-clip rounded-lg outline">
             <Image
               className="rounded-lg object-cover"
-              src={metadata.image}
+              src={resolveImage(metadata.image)}
               alt="Blog cover picture"
               fill
               priority
+              placeholder="blur"
             />
           </div>
           {metadata.caption && (

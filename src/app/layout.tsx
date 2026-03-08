@@ -4,7 +4,7 @@ import { Courier_Prime, Funnel_Display, Roboto_Slab } from 'next/font/google';
 import './globals.css';
 import './components.css';
 
-import Nav from '~/components/nav';
+import { Nav } from '~/components/nav';
 
 const funnelDisplay = Funnel_Display({
   variable: '--font-sans',

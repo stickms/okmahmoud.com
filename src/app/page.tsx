@@ -1,6 +1,6 @@
 import workdata from '~/../public/work/data.json';
-import Card from '~/components/card';
-import ScrollReveal from '~/components/scroll-reveal';
+import { Card } from '~/components/card';
+import { ScrollReveal } from '~/components/scroll-reveal';
 
 export default function Home() {
   const visibleWork = workdata.work.filter(({ hidden }) => !hidden);

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaGithub } from 'react-icons/fa';
 
-export default function Nav() {
+export function Nav() {
   const pathname = usePathname();
 
   const isBlog = pathname.startsWith('/blog');

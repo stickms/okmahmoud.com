@@ -1,6 +1,6 @@
 import type { AnchorHTMLAttributes } from 'react';
 
-export default function ExternalLink({
+export function ExternalLink({
   href,
   children,
   ...props

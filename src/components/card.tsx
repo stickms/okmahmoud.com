@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Markdown from 'react-markdown';
-import ExternalLink from '~/components/external-link';
+import { ExternalLink } from '~/components/external-link';
+import { resolveImage } from '~/util/image';
 
 type CardParams = {
   title: string;
@@ -19,14 +20,16 @@ function CardContent({
   description,
   footer,
 }: Omit<CardParams, 'link'>) {
+  const src = resolveImage(image);
   return (
     <div className="relative h-full rounded-md outline pb-1.5">
       <div className="relative h-40 w-full">
         <Image
           className="rounded-t-md object-cover"
-          src={image}
+          src={src}
           alt={`picture for ${title}`}
           fill
+          placeholder="blur"
         />
       </div>
       <div className="m-1.5 whitespace-pre-line">
@@ -42,13 +45,7 @@ function CardContent({
   );
 }
 
-export default function Card({
-  title,
-  image,
-  description,
-  link,
-  footer,
-}: CardParams) {
+export function Card({ title, image, description, link, footer }: CardParams) {
   return (
     <a
       href={link}

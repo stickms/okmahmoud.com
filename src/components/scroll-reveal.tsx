@@ -1,8 +1,4 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
-
-export default function ScrollReveal({
+export function ScrollReveal({
   children,
   className = '',
   delay = 0,
@@ -11,29 +7,11 @@ export default function ScrollReveal({
   className?: string;
   delay?: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.style.transitionDelay = `${delay}ms`;
-          el.classList.add('revealed');
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.1 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [delay]);
-
   return (
-    <div ref={ref} className={`scroll-reveal ${className}`}>
+    <div
+      className={`scroll-reveal ${className}`}
+      style={{ animationDelay: `${delay}ms` }}
+    >
       {children}
     </div>
   );
