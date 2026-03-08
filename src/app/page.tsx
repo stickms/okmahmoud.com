@@ -1,5 +1,6 @@
 import workdata from '~/../public/work/data.json';
 import Card from '~/components/card';
+import ScrollReveal from '~/components/scroll-reveal';
 
 export default function Home() {
   const visibleWork = workdata.work.filter(({ hidden }) => !hidden);
@@ -12,15 +13,20 @@ export default function Home() {
       </p>
       <div>
         <h3 className="text-center sm:text-left">Work</h3>
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          {visibleWork.map((data) => (
-            <Card
+        <div className="flex flex-wrap items-stretch justify-center gap-4 pt-2">
+          {visibleWork.map((data, i) => (
+            <ScrollReveal
               key={data.title}
-              title={data.title}
-              image={data.image}
-              footer={data.link}
-              description={data.description}
-            />
+              delay={i * 100}
+              className="max-w-full min-w-56 grow basis-0"
+            >
+              <Card
+                title={data.title}
+                image={data.image}
+                link={data.link}
+                description={data.description}
+              />
+            </ScrollReveal>
           ))}
           {visibleWork.length % 2 === 1 && (
             <div className="max-w-full min-w-56 grow basis-0 self-stretch" />

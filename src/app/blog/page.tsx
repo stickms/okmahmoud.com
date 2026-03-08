@@ -1,4 +1,5 @@
 import { BlogCard } from '~/components/card';
+import ScrollReveal from '~/components/scroll-reveal';
 import { blogFiles } from '~/util/pages';
 import type { BlogMetadata } from '~/util/types';
 
@@ -34,19 +35,20 @@ export default async function Blog() {
         <h3 className="text-center sm:text-left">Blog</h3>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           {!blogs.length && <h4 className="mt-16">nothing here yet...</h4>}
-          {blogs.map((data) => (
-            <BlogCard
-              key={data.title}
-              title={data.title}
-              image={data.image}
-              link={data.link}
-              description={data.description}
-              footer={data.date.toLocaleDateString('en-US', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              })}
-            />
+          {blogs.map((data, i) => (
+            <ScrollReveal key={data.title} delay={i * 100} className="w-full">
+              <BlogCard
+                title={data.title}
+                image={data.image}
+                link={data.link}
+                description={data.description}
+                footer={data.date.toLocaleDateString('en-US', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              />
+            </ScrollReveal>
           ))}
         </div>
       </div>

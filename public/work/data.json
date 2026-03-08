@@ -3,38 +3,38 @@
     {
       "title": "Delineo Disease Modeling",
       "image": "/work/delineo.png",
-      "link": "[Visit](https://delineo.me) / [GitHub](https://github.com/Delineo-Disease-Modeling)",
+      "link": "https://delineo.me",
       "description": "Research project focused on small-town disease simulation"
     },
     {
       "title": "Kuchibhotla Laboratory",
       "image": "/work/kishorelab.png",
-      "link": "[Visit](https://kishorelab.org)",
+      "link": "https://kishorelab.org",
       "description": "Neuroscience research focused on neural circuits and learning"
     },
     {
       "title": "Neuroarts Resource Center",
       "image": "/work/nrc.png",
-      "link": "[Visit](https://neuroartsresourcecenter.com)",
-      "description": "Neuroaesthetics digital library where I write and curate articles"
+      "link": "https://neuroartsresourcecenter.com",
+      "description": "Neuroaesthetics digital research library where I write and curate articles"
     },
     {
       "title": "Stickbot.net",
       "image": "/work/stickbotnet.png",
-      "link": "[Visit](https://stickbot.net)",
+      "link": "https://stickbot.net",
       "description": "Personal website with features such as watch together, steam profile API, and more"
     },
     {
       "title": "Stickbot",
       "image": "/work/stickbot.png",
-      "link": "[GitHub](https://github.com/stickms/Stickbot)",
+      "link": "https://github.com/stickms/Stickbot",
       "description": "Discord bot with stickbot.net integration and commands",
       "hidden": true
     },
     {
       "title": "Chatstick",
       "image": "/work/chatstick.png",
-      "link": "[GitHub](https://github.com/stickms/Chatstick)",
+      "link": "https://github.com/stickms/Chatstick",
       "description": "Discord bot with AI chatting & LLM functionality",
       "hidden": true
     }
