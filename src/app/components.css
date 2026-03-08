@@ -1,6 +1,6 @@
 a {
   text-decoration: underline;
-  color: #3792d4;
+  color: var(--link-color);
   transition: 200ms;
 }
 
@@ -22,17 +22,6 @@ a.nav:hover {
 a.target {
   filter: none;
   text-decoration: underline;
-}
-
-a.nav.icon {
-  color: var(--foreground);
-  text-decoration: none;
-  transition: 200ms;
-  filter: brightness(200%);
-}
-
-a.nav.icon:hover {
-  filter: brightness(100%);
 }
 
 h1 {

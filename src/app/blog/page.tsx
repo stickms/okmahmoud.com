@@ -12,7 +12,7 @@ export default async function Blog() {
 
     for (const filename of blogFiles) {
       const { metadata }: { metadata: BlogMetadata } = await import(
-        `~/../public/blog/${filename}.mdx`
+        `~/content/blog/${filename}.mdx`
       );
 
       if (metadata.published) {

@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const { metadata }: { metadata: BlogMetadata } = await import(
-    `~/../public/blog/${slug}.mdx`
+    `~/content/blog/${slug}.mdx`
   );
 
   return {
@@ -41,7 +41,7 @@ export default async function BlogPage({
     default: Content,
     metadata,
   }: { default: MDXContent; metadata: BlogMetadata } = await import(
-    `~/../public/blog/${slug}.mdx`
+    `~/content/blog/${slug}.mdx`
   );
 
   if (!metadata.published) {

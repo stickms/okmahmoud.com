@@ -2,6 +2,8 @@ import workdata from '~/../public/work/data.json';
 import Card from '~/components/card';
 
 export default function Home() {
+  const visibleWork = workdata.work.filter(({ hidden }) => !hidden);
+
   return (
     <div className="flex flex-col gap-6">
       <p className="text-center whitespace-pre-line">
@@ -11,19 +13,16 @@ export default function Home() {
       <div>
         <h3 className="text-center sm:text-left">Work</h3>
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          {workdata.work
-            .filter(({ hidden }) => !hidden)
-            .map((data) => (
-              <Card
-                key={data.title}
-                title={data.title}
-                image={data.image}
-                footer={data.link}
-                description={data.description}
-              />
-            ))}
-          {/* Odd numbered elements? We add a buffer */}
-          {workdata.work.length % 2 === 1 && (
+          {visibleWork.map((data) => (
+            <Card
+              key={data.title}
+              title={data.title}
+              image={data.image}
+              footer={data.link}
+              description={data.description}
+            />
+          ))}
+          {visibleWork.length % 2 === 1 && (
             <div className="max-w-full min-w-56 grow basis-0 self-stretch" />
           )}
         </div>

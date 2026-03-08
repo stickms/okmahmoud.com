@@ -4,6 +4,7 @@
 :root {
   --background: #eceff4;
   --foreground: #2a3439;
+  --link-color: #3792d4;
 }
 
 body {

@@ -1,12 +1,9 @@
 import type { MDXComponents } from 'mdx/types';
+import ExternalLink from '~/components/external-link';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
-    a: ({ href, children }) => (
-      <a target="_blank" rel="noopener noreferrer" href={href}>
-        {children}
-      </a>
-    ),
+    a: ExternalLink,
   };
 }

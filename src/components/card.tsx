@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Markdown from 'react-markdown';
+import ExternalLink from '~/components/external-link';
 
 type CardParams = {
   title: string;
@@ -8,6 +9,8 @@ type CardParams = {
   footer: string;
   description: string;
 };
+
+const markdownComponents = { a: ExternalLink };
 
 export default function Card({
   title,
@@ -23,35 +26,14 @@ export default function Card({
           src={image}
           alt={`picture for ${title}`}
           fill
-          priority
         />
       </div>
       <div className="p-1.5 whitespace-pre-line">
         <h4>{title}</h4>
-        <Markdown
-          components={{
-            a: ({ href, children }) => (
-              <a target="_blank" rel="noopener noreferrer" href={href}>
-                {children}
-              </a>
-            ),
-          }}
-        >
-          {description}
-        </Markdown>
+        <Markdown components={markdownComponents}>{description}</Markdown>
       </div>
       <div className="absolute right-0 bottom-0 px-2 pb-1.5 text-sm">
-        <Markdown
-          components={{
-            a: ({ href, children }) => (
-              <a target="_blank" rel="noopener noreferrer" href={href}>
-                {children}
-              </a>
-            ),
-          }}
-        >
-          {footer}
-        </Markdown>
+        <Markdown components={markdownComponents}>{footer}</Markdown>
       </div>
     </div>
   );
@@ -65,11 +47,7 @@ export function BlogCard({
   link,
 }: CardParams & { link: string }) {
   return (
-    <Link
-      href={link}
-      className="w-full text-(--foreground)! no-underline!"
-      style={undefined}
-    >
+    <Link href={link} className="w-full text-(--foreground)! no-underline!">
       <div className="rounded-md hover:underline">
         <Card
           title={title}

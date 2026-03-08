@@ -1,13 +1,7 @@
-import path from 'node:path';
-import { globby } from 'globby';
+import { readdirSync } from 'node:fs';
+import { join } from 'node:path';
 
 // Only the names of the files, no extensions
-async function getBlogFiles() {
-  return (
-    await globby('public/blog/*.mdx', {
-      onlyFiles: true,
-    })
-  ).map((name) => path.basename(name).replace(/\.[^/.]+$/, ''));
-}
-
-export const blogFiles = await getBlogFiles();
+export const blogFiles = readdirSync(join(process.cwd(), 'src/content/blog'))
+  .filter((f) => f.endsWith('.mdx'))
+  .map((f) => f.replace(/\.mdx$/, ''));
