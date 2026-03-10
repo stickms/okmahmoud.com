@@ -5,10 +5,11 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaGithub } from 'react-icons/fa';
+import { ThemeToggle } from '~/components/theme-toggle';
+import { ExternalLink } from './external-link';
 
 export function Nav() {
   const pathname = usePathname();
-
   const isBlog = pathname.startsWith('/blog');
 
   return (
@@ -19,14 +20,13 @@ export function Nav() {
       <Link className={`nav ${isBlog ? 'target' : ''}`} href="/blog">
         Blog
       </Link>
-      <Link
+      <ExternalLink
         href="https://github.com/stickms"
-        target="_blank"
-        rel="noopener noreferrer"
         className="nav icon"
       >
         <FaGithub />
-      </Link>
+      </ExternalLink>
+      <ThemeToggle />
     </nav>
   );
 }
